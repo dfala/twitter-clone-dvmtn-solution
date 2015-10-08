@@ -1,7 +1,5 @@
 $( document ).ready(function() {
   // INIT
-  // var textarea, tweetControls, charCount, tweetSubmit, charLeft, tweet, tweetCompose, tweetActions;
-
   var textarea = $('#main-compose'),
       tweetControls = $('#tweet-controls'),
       charCount = $('#char-count'),
@@ -20,7 +18,6 @@ $( document ).ready(function() {
   };
 
 
-
   textarea.click(function (e) {
     textarea.css('min-height', '5rem');
     tweetControls.css('display', 'inherit');
@@ -28,6 +25,7 @@ $( document ).ready(function() {
 
 
   textarea.keyup(function (e) {
+    console.warn(e);
     charLeft = 140 - e.target.value.length;
     charCount.text(charLeft);
 
