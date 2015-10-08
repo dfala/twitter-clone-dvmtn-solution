@@ -25,7 +25,6 @@ $( document ).ready(function() {
 
 
   textarea.keyup(function (e) {
-    console.warn(e);
     charLeft = 140 - e.target.value.length;
     charCount.text(charLeft);
 
